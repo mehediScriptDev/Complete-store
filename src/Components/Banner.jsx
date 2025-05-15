@@ -1,4 +1,5 @@
 import banner from "../images/banner.jpg";
+import { SiAdguard } from "react-icons/si";
 
 const Banner = () => {
   return (
@@ -11,7 +12,7 @@ const Banner = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/50 z-0"></div>
-      <div className="relative z-10 flex justify-center flex-col gap-y-2 items-center text-white">
+      <div className="relative z-10 flex justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
         <h1 className="font-bold text-4xl">
           Legalizations and apostilles without hassle
         </h1>
@@ -415,10 +416,10 @@ const Banner = () => {
               <option>Zambia</option>
               <option>Zimbabwe</option>
             </select>
-            <button className="btn h-auto px-7 border-transparent join-item bg-bidcl">Start</button>
+            <button className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white"><SiAdguard /> Legalize</button>
           </div>
-          <div className="join-vertical">
-            <div className="bg-gray-700">
+          <div className="">
+            <div className="backdrop-blur-sm bg-white/30">
               <h1>heytherer</h1>
             </div>
           </div>
