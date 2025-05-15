@@ -20,7 +20,7 @@ const Nav = () => {
     <section className="w-11/12 mx-auto">
       <div className="flex justify-between items-center bg-base-100 shadow-sm">
         <div className="">
-            <img src={logo} alt="" />
+            <img className="w-28 md:w-36" src={logo} alt="" />
          
         </div>
 
