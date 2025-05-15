@@ -1,6 +1,7 @@
 import { IoMdMenu } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import logo from '../images/logo.png'
+import { PiSignInBold } from "react-icons/pi";
 
 const Nav = () => {
   const links = (
@@ -10,6 +11,9 @@ const Nav = () => {
       </li>
       <li>
         <NavLink>F.A.Q</NavLink>
+      </li>
+      <li>
+        <NavLink>About</NavLink>
       </li>
       <li>
         <NavLink>Contact</NavLink>
@@ -24,15 +28,16 @@ const Nav = () => {
          
         </div>
 
-        <div className="flex gap-2 items-center">
-          <div className=" hidden lg:flex">
+        <div className="flex gap-2 lg:gap-12 items-center">
+          <div className=" hidden lg:flex font-semibold">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
 
-          <div className="">
+          <div className="flex items-center">
+            <a className="hover:text-bidcl text-travelcl md:text-2xl" href=""><PiSignInBold /></a>
             <div className="dropdown dropdown-hover">
-              <div tabIndex={0} role="button" className="btn m-1">
-                <IoMdMenu />
+              <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+                <IoMdMenu className="md:text-2xl" />
               </div>
               <ul
                 tabIndex={0}

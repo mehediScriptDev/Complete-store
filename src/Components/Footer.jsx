@@ -1,4 +1,5 @@
 import logo from '../images/footer.png'
+import { PiSignInBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
