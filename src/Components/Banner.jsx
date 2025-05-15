@@ -1,10 +1,11 @@
 import banner from "../images/banner.jpg";
 import { SiAdguard } from "react-icons/si";
+import { IoCall } from "react-icons/io5";
 
 const Banner = () => {
   return (
     <section
-      className="min-h-screen relative w-full flex justify-center"
+      className="py-10 relative w-full flex justify-center "
       style={{
         backgroundImage: `url(${banner})`,
         backgroundPosition: "center",
@@ -12,14 +13,14 @@ const Banner = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/50 z-0"></div>
-      <div className="relative z-10 flex justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
-        <h1 className="font-bold text-4xl">
+      <div className="relative z-10 flex mt-16 justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
+        <h1 className="font-bold text-center md:text-left text-2xl md:text-4xl">
           Legalizations and apostilles without hassle
         </h1>
-        <h1>
+        <p className="text-sm text-center md:text-left">
           AuthenticationHQ is everything you need to legalize documents for use
           in any country of the World
-        </h1>
+        </p>
         <div className="">
           <div className="join menu menu-vertical md:menu-horizontal rounded-box">
             <select className="text-black py-3 px-5 join-item" name="From">
@@ -417,6 +418,12 @@ const Banner = () => {
               <option>Zimbabwe</option>
             </select>
             <button className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white"><SiAdguard /> Legalize</button>
+          </div>
+
+          <div className="join-vertical">
+            <div className="flex justify-center items-center backdrop-blur-sm bg-black/50 rounded-box">
+            <h1 className="flex items-center gap-2"><IoCall className="text-bidcl" /> Call: 914 973 977</h1>
+          </div>
           </div>
         </div>
       </div>
