@@ -21,9 +21,9 @@ const Banner = () => {
           in any country of the World
         </h1>
         <div className="">
-          <div className="join">
+          <div className="join menu menu-vertical md:menu-horizontal rounded-box">
             <select className="text-black py-3 px-5 join-item" name="From">
-              <option value="">-- Select Country --</option>
+              <option disabled selected hidden value="ok">Select origin country</option>
               <option>Afghanistan</option>
               <option>Albania</option>
               <option>Algeria</option>
@@ -220,7 +220,7 @@ const Banner = () => {
               <option>Zimbabwe</option>
             </select>
             <select className="text-black py-3 px-5 join-item border-l-2" name="">
-              <option value="">-- Select Country --</option>
+              <option disabled selected hidden value="">Select destination country</option>
               <option>Afghanistan</option>
               <option>Albania</option>
               <option>Algeria</option>
@@ -417,11 +417,6 @@ const Banner = () => {
               <option>Zimbabwe</option>
             </select>
             <button className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white"><SiAdguard /> Legalize</button>
-          </div>
-          <div className="">
-            <div className="backdrop-blur-sm bg-white/30">
-              <h1>heytherer</h1>
-            </div>
           </div>
         </div>
       </div>
