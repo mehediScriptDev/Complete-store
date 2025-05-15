@@ -6,12 +6,19 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Banner from './Components/Banner.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    children:[
+      {
+        path:'/',
+        element: <Banner></Banner>
+      }
+    ]
   },
 ]);
 createRoot(document.getElementById('root')).render(
