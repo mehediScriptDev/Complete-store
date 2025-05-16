@@ -24,6 +24,9 @@ const Error = () => {
         back
       </Link> */}
     </section>
+    <div className="flex justify-center">
+      <Link className="btn bg-black px-4 py-2 text-white" to={'/'}>Back home</Link>
+    </div>
     </section>
   );
 };
