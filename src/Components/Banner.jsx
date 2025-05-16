@@ -3,10 +3,9 @@ import { SiAdguard } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
 import { ImWhatsapp } from "react-icons/im";
 import { MdLocationPin } from "react-icons/md";
-import 'animate.css';
-import firstimg from '../images/place_order.jpg'
-import secondimg from '../images/forward_documents.jpg'
-import thirdimg from '../images/receive_legalized_documents.jpg'
+import "animate.css";
+import { FaChartLine } from "react-icons/fa6";
+import { TbWorld } from "react-icons/tb";
 
 const Banner = () => {
   return (
@@ -437,11 +436,16 @@ const Banner = () => {
         </div>
         <div>
           <div className="flex font-semibold flex-row justify-center gap-4 px-4 py-2 items-center backdrop-blur-sm bg-black/50 rounded-box">
-            <a href="https://api.whatsapp.com/send/?phone=%2B15557174563&text&type=phone_number&app_absent=0" target="_black" className="lg:flex items-center gap-2 lg:text-xl hidden">
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B15557174563&text&type=phone_number&app_absent=0"
+              target="_black"
+              className="lg:flex items-center gap-2 lg:text-xl hidden"
+            >
               <ImWhatsapp className="text-bidcl" /> WhatsApp
             </a>
             <h1 className="flex items-center gap-2 text-xs md:text-sm lg:text-xl">
-              <IoCall className="text-bidcl animate__animated animate__heartBeat" /> Call: 914 973 977
+              <IoCall className="text-bidcl animate__animated animate__heartBeat" />{" "}
+              Call: 914 973 977
             </h1>
             <h1 className="flex items-center gap-2 text-xs md:text-sm lg:text-xl">
               <MdLocationPin className="text-bidcl" /> Banasree, Dhaka
@@ -449,12 +453,29 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="relative z-10 py-5 bg-black/25 mt-10 flex flex-col items-center justify-center">
-        <div className="flex items-center">
-          <h1 className="text-8xl text-gray-500">1</h1>
-          <img src={firstimg} alt="" />
+      <div className="relative  py-5 bg-black/25 mt-7 text-white ">
+        <div className="gap-y-2 flex flex-col items-center justify-center w-10/12 mx-auto ">
+          <h1 className="text-2xl lg:text-left text-center py-3 font-semibold">
+            Welcome to Visa & Immigration Consultancy
+          </h1>
+          <div className="flex justify-center gap-10 items-center">
+            <div className="flex flex-col items-center">
+           <FaChartLine className="bg-bidcl p-3 rounded-full text-5xl"/>
+           <div>
+            <p>Accurate Guidance</p>
+            
+           </div>
+          </div>
+          <div className="flex flex-col items-center">
+           <TbWorld className="bg-bidcl p-3 rounded-full text-5xl"/>
+           <div>
+            <p className="text-center">Accurate Guidance</p>
+            
+           </div>
+          </div>
+          </div>
+         
         </div>
-        <p className="py-2 text-2xl text-white">Place order</p>
       </div>
     </section>
   );
