@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import image from '../images/error-404.gif'
-import Nav from './Nav';
 
 const Error = () => {
     return (

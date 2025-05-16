@@ -33,7 +33,7 @@ const Nav = () => {
           </div>
           
           <div className="flex items-center gap-2">
-            <a className="hover:text-bidcl text-travelcl md:text-2xl" href="">
+            <a title="Register/Login" className="hover:text-bidcl text-travelcl md:text-2xl" href="">
               <PiSignInBold />
             </a>
             <div className="drawer z-20 drawer-end">
