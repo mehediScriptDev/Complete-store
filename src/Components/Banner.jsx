@@ -469,7 +469,7 @@ const Banner = () => {
           <div className="flex flex-col items-center">
            <TbWorld className="bg-bidcl p-3 rounded-full text-5xl"/>
            <div>
-            <p className="text-center">Accurate Guidance</p>
+            <p className="text-center">Our Presence</p>
             
            </div>
           </div>
