@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Banner from './Components/Banner.jsx';
 import Error from './Components/Error.jsx';
+import Home from './Components/Home.jsx';
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element: <Banner></Banner>
+        element: <Home></Home>
       }
     ]
   },

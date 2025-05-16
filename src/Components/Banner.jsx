@@ -8,6 +8,7 @@ import { FaChartLine } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import SplashCursor from './SplashCursor'
+import Visa from "./Visa";
 
 const Banner = () => {
   return (
@@ -481,6 +482,7 @@ const Banner = () => {
          
         </div>
       </div>
+      
     </section>
   );
 };
