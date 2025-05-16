@@ -1,9 +1,12 @@
 import logo from '../images/footer.png'
-import { PiSignInBold } from "react-icons/pi";
+
+
+
 
 const Footer = () => {
   return (
     <section className='bg-gray-100 mt-16'>
+      
       <footer className=" w-11/12 mx-auto border-t py-4 px-6 text-sm text-gray-700 flex justify-between items-center">
         {/* Left: Logo and Brand Name */}
         <div className="flex items-center space-x-2">

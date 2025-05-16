@@ -1,203 +1,76 @@
-import { useEffect, useRef, useState } from 'react';
-
 const TextPressure = ({
-  text = 'Compressa',
-  fontFamily = 'Compressa VF',
-  // This font is just an example, you should not use it in commercial projects.
-  fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',
-
-  width = true,
-  weight = true,
-  italic = true,
-  alpha = false,
-
-  flex = true,
-  stroke = false,
-  scale = false,
-
-  textColor = 'black',
-  strokeColor = '#FF0000',
-  strokeWidth = 2,
-  className = '',
-
-  minFontSize = 40,
-
+  children,
+  speed = 0.5,
+  enableShadows = true,
+  enableOnHover = false,
+  className = "",
 }) => {
-  const containerRef = useRef(null);
-  const titleRef = useRef(null);
-  const spansRef = useRef([]);
-
-  const mouseRef = useRef({ x: 0, y: 0 });
-  const cursorRef = useRef({ x: 0, y: 0 });
-
-  const [fontSize, setFontSize] = useState(minFontSize);
-  const [scaleY, setScaleY] = useState(1);
-  const [lineHeight, setLineHeight] = useState(1);
-
-  const chars = text.split('');
-
-  const dist = (a, b) => {
-    const dx = b.x - a.x;
-    const dy = b.y - a.y;
-    return Math.sqrt(dx * dx + dy * dy);
+  const inlineStyles = {
+    "--after-duration": `${speed * 3}s`,
+    "--before-duration": `${speed * 2}s`,
+    "--after-shadow": enableShadows ? "-5px 0 red" : "none",
+    "--before-shadow": enableShadows ? "5px 0 cyan" : "none",
   };
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      cursorRef.current.x = e.clientX;
-      cursorRef.current.y = e.clientY;
-    };
-    const handleTouchMove = (e) => {
-      const t = e.touches[0];
-      cursorRef.current.x = t.clientX;
-      cursorRef.current.y = t.clientY;
-    };
+  const baseClasses =
+  "text-black text-[clamp(2rem,10vw,8rem)] font-black relative mx-auto select-none cursor-pointer";
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
 
-    if (containerRef.current) {
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-      mouseRef.current.x = left + width / 2;
-      mouseRef.current.y = top + height / 2;
-      cursorRef.current.x = mouseRef.current.x;
-      cursorRef.current.y = mouseRef.current.y;
-    }
+  const pseudoClasses = !enableOnHover
+    ? 
+      "after:content-[attr(data-text)] after:absolute after:top-0 after:left-[10px] after:text-white after:bg-[#060606] after:overflow-hidden after:[clip-path:inset(0_0_0_0)] after:[text-shadow:var(--after-shadow)] after:animate-glitch-after " +
+      "before:content-[attr(data-text)] before:absolute before:top-0 before:left-[-10px] before:text-white before:bg-[#060606] before:overflow-hidden before:[clip-path:inset(0_0_0_0)] before:[text-shadow:var(--before-shadow)] before:animate-glitch-before"
+    : 
+      "after:content-[''] after:absolute after:top-0 after:left-[10px] after:text-white after:bg-[#060606] after:overflow-hidden after:[clip-path:inset(0_0_0_0)] after:opacity-0 " +
+      "before:content-[''] before:absolute before:top-0 before:left-[-10px] before:text-white before:bg-[#060606] before:overflow-hidden before:[clip-path:inset(0_0_0_0)] before:opacity-0 " +
+      "hover:after:content-[attr(data-text)] hover:after:opacity-100 hover:after:[text-shadow:var(--after-shadow)] hover:after:animate-glitch-after " +
+      "hover:before:content-[attr(data-text)] hover:before:opacity-100 hover:before:[text-shadow:var(--before-shadow)] hover:before:animate-glitch-before";
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, []);
-
-  const setSize = () => {
-    if (!containerRef.current || !titleRef.current) return;
-
-    const { width: containerW, height: containerH } = containerRef.current.getBoundingClientRect();
-
-    let newFontSize = containerW / (chars.length / 2);
-    newFontSize = Math.max(newFontSize, minFontSize);
-
-    setFontSize(newFontSize);
-    setScaleY(1);
-    setLineHeight(1);
-
-    requestAnimationFrame(() => {
-      if (!titleRef.current) return;
-      const textRect = titleRef.current.getBoundingClientRect();
-
-      if (scale && textRect.height > 0) {
-        const yRatio = containerH / textRect.height;
-        setScaleY(yRatio);
-        setLineHeight(yRatio);
-      }
-    });
-  };
-
-  useEffect(() => {
-    setSize();
-    window.addEventListener('resize', setSize);
-    return () => window.removeEventListener('resize', setSize);
-  }, [scale, text]);
-
-  useEffect(() => {
-    let rafId;
-    const animate = () => {
-      mouseRef.current.x += (cursorRef.current.x - mouseRef.current.x) / 15;
-      mouseRef.current.y += (cursorRef.current.y - mouseRef.current.y) / 15;
-
-      if (titleRef.current) {
-        const titleRect = titleRef.current.getBoundingClientRect();
-        const maxDist = titleRect.width / 2;
-
-        spansRef.current.forEach((span) => {
-          if (!span) return;
-
-          const rect = span.getBoundingClientRect();
-          const charCenter = {
-            x: rect.x + rect.width / 2,
-            y: rect.y + rect.height / 2,
-          };
-
-          const d = dist(mouseRef.current, charCenter);
-
-          const getAttr = (distance, minVal, maxVal) => {
-            const val = maxVal - Math.abs((maxVal * distance) / maxDist);
-            return Math.max(minVal, val + minVal);
-          };
-
-          const wdth = width ? Math.floor(getAttr(d, 5, 200)) : 100;
-          const wght = weight ? Math.floor(getAttr(d, 100, 900)) : 400;
-          const italVal = italic ? getAttr(d, 0, 1).toFixed(2) : 0;
-          const alphaVal = alpha ? getAttr(d, 0, 1).toFixed(2) : 1;
-
-          span.style.opacity = alphaVal;
-          span.style.fontVariationSettings = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
-        });
-      }
-
-      rafId = requestAnimationFrame(animate);
-    };
-
-    animate();
-    return () => cancelAnimationFrame(rafId);
-  }, [width, weight, italic, alpha, chars.length]);
+  const combinedClasses = `${baseClasses} ${pseudoClasses} ${className}`;
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-full overflow-hidden bg-transparent"
-    >
-      <style>{`
-        @font-face {
-          font-family: '${fontFamily}';
-          src: url('${fontUrl}');
-          font-style: normal;
-        }
-        .stroke span {
-          position: relative;
-          color: ${textColor};
-        }
-        .stroke span::after {
-          content: attr(data-char);
-          position: absolute;
-          left: 0;
-          top: 0;
-          color: transparent;
-          z-index: -1;
-          -webkit-text-stroke-width: ${strokeWidth}px;
-          -webkit-text-stroke-color: ${strokeColor};
-        }
-      `}</style>
-
-      <h1
-        ref={titleRef}
-        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''
-          } ${stroke ? 'stroke' : ''} uppercase text-center`}
-        style={{
-          fontFamily,
-          fontSize: fontSize,
-          lineHeight,
-          transform: `scale(1, ${scaleY})`,
-          transformOrigin: 'center top',
-          margin: 0,
-          fontWeight: 700,
-          color: stroke ? undefined : textColor,
-        }}
-      >
-        {chars.map((char, i) => (
-          <span
-            key={i}
-            ref={(el) => (spansRef.current[i] = el)}
-            data-char={char}
-            className="inline-block"
-          >
-            {char}
-          </span>
-        ))}
-      </h1>
+    <div style={inlineStyles} data-text={children} className={combinedClasses}>
+      {children}
     </div>
   );
 };
 
 export default TextPressure;
+
+// tailwind.config.js
+// module.exports = {
+//   theme: {
+//     extend: {
+//       keyframes: {
+//         glitch: {
+//           "0%": { "clip-path": "inset(20% 0 50% 0)" },
+//           "5%": { "clip-path": "inset(10% 0 60% 0)" },
+//           "10%": { "clip-path": "inset(15% 0 55% 0)" },
+//           "15%": { "clip-path": "inset(25% 0 35% 0)" },
+//           "20%": { "clip-path": "inset(30% 0 40% 0)" },
+//           "25%": { "clip-path": "inset(40% 0 20% 0)" },
+//           "30%": { "clip-path": "inset(10% 0 60% 0)" },
+//           "35%": { "clip-path": "inset(15% 0 55% 0)" },
+//           "40%": { "clip-path": "inset(25% 0 35% 0)" },
+//           "45%": { "clip-path": "inset(30% 0 40% 0)" },
+//           "50%": { "clip-path": "inset(20% 0 50% 0)" },
+//           "55%": { "clip-path": "inset(10% 0 60% 0)" },
+//           "60%": { "clip-path": "inset(15% 0 55% 0)" },
+//           "65%": { "clip-path": "inset(25% 0 35% 0)" },
+//           "70%": { "clip-path": "inset(30% 0 40% 0)" },
+//           "75%": { "clip-path": "inset(40% 0 20% 0)" },
+//           "80%": { "clip-path": "inset(20% 0 50% 0)" },
+//           "85%": { "clip-path": "inset(10% 0 60% 0)" },
+//           "90%": { "clip-path": "inset(15% 0 55% 0)" },
+//           "95%": { "clip-path": "inset(25% 0 35% 0)" },
+//           "100%": { "clip-path": "inset(30% 0 40% 0)" },
+//         },
+//       },
+//       animation: {
+//         "glitch-after": "glitch var(--after-duration) infinite linear alternate-reverse",
+//         "glitch-before": "glitch var(--before-duration) infinite linear alternate-reverse",
+//       },
+//     },
+//   },
+//   plugins: [],
+// };

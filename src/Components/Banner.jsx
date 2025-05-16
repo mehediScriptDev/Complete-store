@@ -7,10 +7,12 @@ import "animate.css";
 import { FaChartLine } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import SplashCursor from './SplashCursor'
 
 const Banner = () => {
   return (
     <section
+    
       className="py-10 relative w-full flex-col justify-center "
       style={{
         backgroundImage: `url(${banner})`,
@@ -18,6 +20,7 @@ const Banner = () => {
         backgroundSize: "cover",
       }}
     >
+      <SplashCursor />
       <div className="absolute inset-0 bg-black/50 z-0"></div>
       <div className="relative z-10 flex mt-16 justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
         <h1 className="font-bold text-center md:text-left md:py-4 text-2xl md:text-4xl">
