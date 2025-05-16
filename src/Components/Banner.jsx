@@ -3,11 +3,15 @@ import { SiAdguard } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
 import { ImWhatsapp } from "react-icons/im";
 import { MdLocationPin } from "react-icons/md";
+import 'animate.css';
+import firstimg from '../images/place_order.jpg'
+import secondimg from '../images/forward_documents.jpg'
+import thirdimg from '../images/receive_legalized_documents.jpg'
 
 const Banner = () => {
   return (
     <section
-      className="py-10 relative w-full flex justify-center "
+      className="py-10 relative w-full flex-col justify-center "
       style={{
         backgroundImage: `url(${banner})`,
         backgroundPosition: "center",
@@ -437,13 +441,20 @@ const Banner = () => {
               <ImWhatsapp className="text-bidcl" /> WhatsApp
             </a>
             <h1 className="flex items-center gap-2 text-xs md:text-sm lg:text-xl">
-              <IoCall className="text-bidcl" /> Call: 914 973 977
+              <IoCall className="text-bidcl animate__animated animate__heartBeat" /> Call: 914 973 977
             </h1>
             <h1 className="flex items-center gap-2 text-xs md:text-sm lg:text-xl">
               <MdLocationPin className="text-bidcl" /> Banasree, Dhaka
             </h1>
           </div>
         </div>
+      </div>
+      <div className="relative z-10 py-5 bg-black/25 mt-10 flex flex-col items-center justify-center">
+        <div className="flex items-center">
+          <h1 className="text-8xl text-gray-500">1</h1>
+          <img src={firstimg} alt="" />
+        </div>
+        <p className="py-2 text-2xl text-white">Place order</p>
       </div>
     </section>
   );
