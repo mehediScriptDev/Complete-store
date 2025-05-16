@@ -11,7 +11,7 @@ const Visa = () => {
         <h1 className="text-2xl font-bold lg:text-4xl text-center">
           Explore all <span className="border-b-8 border-bidcl">visa</span>
         </h1>
-        <div className="mt-10 w-10/12 mx-auto flex justify-evenly items-center gap-2">
+        <div className="mt-10 w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-2">
           <div className="border-dashed border-bidcl border-2 flex flex-col justify-center items-center gap-y-1 rounded-2xl p-10 w-48 h-56">
             <div>
               <img src={firstimg} alt="cardimage" />
