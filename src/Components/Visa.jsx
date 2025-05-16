@@ -8,7 +8,7 @@ const Visa = () => {
   return (
     <section className="mt-10">
       <div>
-        <h1 className="text-2xl font-bold lg:text-4xl text-center">
+        <h1 className="text-3xl font-bold lg:text-4xl text-center">
           Explore all <span className="border-b-8 border-bidcl">visa</span>
         </h1>
         <div className="mt-10 w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-2">
