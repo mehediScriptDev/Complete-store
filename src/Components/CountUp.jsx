@@ -6,7 +6,7 @@ export default function CountUp({
   from = 0,
   direction = "up",
   delay = 0,
-  duration = 2, // Duration of the animation in seconds
+  duration = .5, // Duration of the animation in seconds
   className = "",
   startWhen = true,
   separator = "",
