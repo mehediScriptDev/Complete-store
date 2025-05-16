@@ -6,6 +6,7 @@ import { MdLocationPin } from "react-icons/md";
 import "animate.css";
 import { FaChartLine } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -429,9 +430,9 @@ const Banner = () => {
               <option>Zambia</option>
               <option>Zimbabwe</option>
             </select>
-            <button className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white">
+            <Link to={'/appy'} className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white">
               <SiAdguard /> Legalize
-            </button>
+            </Link>
           </div>
         </div>
         <div>
