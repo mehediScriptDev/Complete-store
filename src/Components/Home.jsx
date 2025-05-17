@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Visa from './Visa';
 import Feature from './Feature';
 import CircularGallery from './CircularGallery';
+import Partner from './Partner';
 
 const Home = () => {
     return (
@@ -10,7 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <Visa></Visa>
             <Feature></Feature>
-            <CircularGallery></CircularGallery>
+            <Partner></Partner>
         </div>
     );
 };
