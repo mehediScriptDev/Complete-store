@@ -22,7 +22,7 @@ const Visa = () => {
                 to={20746}
                 separator=","
                 direction="up"
-                duration={.5}
+                duration={.2}
                 className="count-up-text"
               />
             </h1>
@@ -38,7 +38,7 @@ const Visa = () => {
                 to={21123}
                 separator=","
                 direction="up"
-                duration={.5}
+                duration={.2}
                 className="count-up-text"
               />
             </h1>
@@ -54,7 +54,7 @@ const Visa = () => {
                 to={23648}
                 separator=","
                 direction="up"
-                duration={.5}
+                duration={.2}
                 className="count-up-text"
               />
             </h1>
@@ -70,7 +70,7 @@ const Visa = () => {
                 to={4085}
                 separator=","
                 direction="up"
-                duration={.5}
+                duration={.2}
                 className="count-up-text"
               />
             </h1>
