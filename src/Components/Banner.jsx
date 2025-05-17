@@ -20,19 +20,20 @@ const Banner = () => {
         backgroundSize: "cover",
       }}
     >
+      <div className="absolute inset-0 bg-black/50 z-0"></div>
       <div
-        style={{ height: "500px", position: "relative", overflow: "hidden" }}
+      className="absolute inset-0 z-10"
+        
       >
         <Ribbons
           baseThickness={30}
           colors={["#ffffff"]}
-          speedMultiplier={0.5}
+          speedMultiplier={.5}
           maxAge={500}
-          enableFade={false}
+          enableFade={true}
           enableShaderEffect={true}
         />
       </div>
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
       <div className="relative z-10 flex mt-16 justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
         <h1 className="font-bold text-center md:text-left md:py-4 text-2xl md:text-4xl">
           Legalizations and apostilles without hassle
@@ -471,6 +472,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
       <div className="relative  py-5 bg-black/25 mt-7 text-white ">
         <div className="gap-y-2 flex flex-col items-center justify-center w-10/12 mx-auto ">
           <h1 className="text-2xl lg:text-left text-center py-3 font-semibold">

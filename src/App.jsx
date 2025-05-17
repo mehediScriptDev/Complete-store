@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./App.css";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
-
+import Ribbons from "./Components/Ribbons";
 
 function App() {
   return (
