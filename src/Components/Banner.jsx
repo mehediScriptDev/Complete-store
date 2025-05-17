@@ -7,13 +7,12 @@ import "animate.css";
 import { FaChartLine } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import SplashCursor from './SplashCursor'
+import Ribbons from "./Ribbons";
 import Visa from "./Visa";
 
 const Banner = () => {
   return (
     <section
-    
       className="py-10 relative w-full flex-col justify-center "
       style={{
         backgroundImage: `url(${banner})`,
@@ -21,7 +20,18 @@ const Banner = () => {
         backgroundSize: "cover",
       }}
     >
-      <SplashCursor />
+      <div
+        style={{ height: "500px", position: "relative", overflow: "hidden" }}
+      >
+        <Ribbons
+          baseThickness={30}
+          colors={["#ffffff"]}
+          speedMultiplier={0.5}
+          maxAge={500}
+          enableFade={false}
+          enableShaderEffect={true}
+        />
+      </div>
       <div className="absolute inset-0 bg-black/50 z-0"></div>
       <div className="relative z-10 flex mt-16 justify-center flex-col gap-y-2 items-center w-10/12 mx-auto text-white">
         <h1 className="font-bold text-center md:text-left md:py-4 text-2xl md:text-4xl">
@@ -434,7 +444,10 @@ const Banner = () => {
               <option>Zambia</option>
               <option>Zimbabwe</option>
             </select>
-            <Link to={'/appy'} className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white">
+            <Link
+              to={"/appy"}
+              className="btn h-auto px-7 border-transparent join-item bg-bidcl hover:bg-travelcl duration-300 hover:text-white"
+            >
               <SiAdguard /> Legalize
             </Link>
           </div>
@@ -465,24 +478,20 @@ const Banner = () => {
           </h1>
           <div className="flex justify-center gap-10 items-center">
             <div className="flex flex-col items-center">
-           <FaChartLine className="bg-bidcl p-3 rounded-full text-5xl"/>
-           <div>
-            <p>Accurate Guidance</p>
-            
-           </div>
+              <FaChartLine className="bg-bidcl p-3 rounded-full text-5xl" />
+              <div>
+                <p>Accurate Guidance</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <TbWorld className="bg-bidcl p-3 rounded-full text-5xl" />
+              <div>
+                <p className="text-center">Our Presence</p>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col items-center">
-           <TbWorld className="bg-bidcl p-3 rounded-full text-5xl"/>
-           <div>
-            <p className="text-center">Our Presence</p>
-            
-           </div>
-          </div>
-          </div>
-         
         </div>
       </div>
-      
     </section>
   );
 };
