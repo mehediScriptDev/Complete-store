@@ -60,11 +60,18 @@ const Nav = () => {
                 <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
                   {/* Sidebar content here */}
                   <li>
-                    <a>All Visas</a>
+                    <NavLink>Home</NavLink>
                   </li>
                   <li>
-                    <a>Sidebar Item 2</a>
+                    <NavLink>All Visas</NavLink>
                   </li>
+                  <li>
+                    <NavLink>Contact</NavLink>
+                  </li>
+                  <li>
+                    <NavLink>FAQ</NavLink>
+                  </li>
+                  
                 </ul>
               </div>
             </div>
