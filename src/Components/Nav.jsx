@@ -10,6 +10,9 @@ const Nav = () => {
         <NavLink>Home</NavLink>
       </li>
       <li>
+        <NavLink>All Visas</NavLink>
+      </li>
+      <li>
         <NavLink>F.A.Q</NavLink>
       </li>
       <li>
