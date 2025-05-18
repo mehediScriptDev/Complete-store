@@ -11,12 +11,12 @@ const Latestvisa = () => {
       .catch(err=>console.log(err));
   }, []);
   return (
-    <section className="mt-10 lg:mt-20">
+    <section className="mt-14 lg:mt-20">
       <div className="w-11/12 mx-auto">
         <h1 className="text-3xl font-bold lg:text-4xl text-center ">
           Top 5 most requested visas
         </h1>
-        <div className="mt-10">{
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 gap-y-4">{
             visas.map(visa=> <VisaCard key={visa.id} visa={visa}></VisaCard>)
             }</div>
       </div>
