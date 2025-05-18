@@ -19,7 +19,7 @@ const Nav = () => {
         <NavLink>About</NavLink>
       </li>
       <li>
-        <NavLink>Contact</NavLink>
+        <NavLink to={'/contact'}>Contact</NavLink>
       </li>
     </>
   );
@@ -69,7 +69,7 @@ const Nav = () => {
                     <NavLink>All Visas</NavLink>
                   </li>
                   <li>
-                    <NavLink>Contact</NavLink>
+                    <NavLink to={'/contact'}>Contact</NavLink>
                   </li>
                   <li>
                     <NavLink>FAQ</NavLink>
