@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "country": "USA",
+    "title": "US Tourist Visa",
+    "price": 99,
+    "delivery": "2-3 business days",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-687340,resizemode-75,msid-75501066/nri/visa-and-immigration/coronavirus-us-announces-relaxations-for-h-1b-visa-holders-and-green-card-applicants.jpg"
+  },
+  {
+    "id": 2,
+    "country": "Turkey",
+    "title": "Turkish Visa",
+    "price": 79,
+    "delivery": "Same business day",
+    "image": "https://www.turkeytravelcentre.com/blog/wp-content/uploads/Miletos2.jpg"
+  },
+  {
+    "id": 3,
+    "country": "Canada",
+    "title": "Canada Visitor Visa",
+    "price": 89,
+    "delivery": "5 business days",
+    "image": "https://globalnews.ca/wp-content/uploads/2018/01/quebec-city.jpg?quality=85&strip=all&w=1200"
+  },
+  {
+    "id": 4,
+    "country": "UK",
+    "title": "UK Travel Visa",
+    "price": 105,
+    "delivery": "2 business days",
+    "image": "https://globalvillage.edu.np/wp-content/uploads/2022/01/United-Kingdom.jpg"
+  },
+  {
+    "id": 5,
+    "country": "Australia",
+    "title": "Australian e-Visa",
+    "price": 95,
+    "delivery": "Within 24 hours",
+    "image": "https://i.insider.com/5f3424f2988ee31668198a09?width=700"
+  }
+]
