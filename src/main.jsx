@@ -10,6 +10,7 @@ import Banner from './Components/Banner.jsx';
 import Error from './Components/Error.jsx';
 import Home from './Components/Home.jsx';
 import Contact from './Components/Contact.jsx';
+import Faq from './Components/Faq.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path:'/contact',
         element: <Contact></Contact>
+      },
+      {
+        path:'/faq',
+        element: <Faq></Faq>
       }
     ]
   },

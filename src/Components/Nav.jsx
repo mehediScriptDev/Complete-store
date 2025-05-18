@@ -13,7 +13,7 @@ const Nav = () => {
         <NavLink>All Visas</NavLink>
       </li>
       <li>
-        <NavLink>F.A.Q</NavLink>
+        <NavLink to={'/faq'}>F.A.Q</NavLink>
       </li>
       <li>
         <NavLink>About</NavLink>
@@ -72,7 +72,7 @@ const Nav = () => {
                     <NavLink to={'/contact'}>Contact</NavLink>
                   </li>
                   <li>
-                    <NavLink>FAQ</NavLink>
+                    <NavLink to={'/faq'}>FAQ</NavLink>
                   </li>
                   
                 </ul>
