@@ -3,11 +3,12 @@ import us from "../images/us.jpg";
 import VisaCard from "./VisaCard";
 
 const Latestvisa = () => {
-  const [visas, setVisa] = useState("");
+  const [visas, setVisa] = useState([]);
   useEffect(() => {
-    fetch("/public/data.json")
+    fetch("/data.json")
       .then((res) => res.json())
-      .then((data) => setVisa(data));
+      .then((data) => setVisa(data))
+      .catch(err=>console.log(err));
   }, []);
   return (
     <section className="mt-10 lg:mt-20">
@@ -16,7 +17,7 @@ const Latestvisa = () => {
           Top 5 most requested visas
         </h1>
         <div className="mt-10">{
-            visas.map(visa=> <VisaCard key={visa.id} visa='visa'></VisaCard>)
+            visas.map(visa=> <VisaCard key={visa.id} visa={visa}></VisaCard>)
             }</div>
       </div>
     </section>
