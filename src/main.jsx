@@ -11,6 +11,7 @@ import Error from './Components/Error.jsx';
 import Home from './Components/Home.jsx';
 import Contact from './Components/Contact.jsx';
 import Faq from './Components/Faq.jsx';
+import Addvisa from './Components/Addvisa.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path:'/faq',
         element: <Faq></Faq>
+      },
+      {
+        path:'/addvisa',
+        element: <Addvisa></Addvisa>
       }
     ]
   },
