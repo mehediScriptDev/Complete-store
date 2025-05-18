@@ -21,14 +21,11 @@ const Banner = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/50 z-0"></div>
-      <div
-      className="absolute inset-0 z-10"
-        
-      >
+      <div className="absolute inset-0 z-10">
         <Ribbons
           baseThickness={30}
           colors={["#ffffff"]}
-          speedMultiplier={.5}
+          speedMultiplier={0.5}
           maxAge={500}
           enableFade={true}
           enableShaderEffect={true}
@@ -44,7 +41,11 @@ const Banner = () => {
         </p>
         <div className="">
           <div className="join menu menu-vertical lg:menu-horizontal rounded-box">
-            <select className="text-black py-3 px-5 join-item" name="From">
+            <select
+              required
+              className="text-black py-3 px-5 join-item"
+              name="From"
+            >
               <option disabled selected hidden value="ok">
                 Select origin country
               </option>
@@ -244,6 +245,7 @@ const Banner = () => {
               <option>Zimbabwe</option>
             </select>
             <select
+              required
               className="text-black py-3 px-5 join-item border-l-2"
               name=""
             >

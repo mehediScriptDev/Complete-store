@@ -3,7 +3,7 @@ import faq from "../images/faq.png";
 const Faq = () => {
   return (
     <section className="py-10 bg-base-100">
-      <div className="w-11/12 md:w-9/12 mx-auto">
+      <div className="w-11/12  mx-auto">
         <div className="breadcrumbs text-sm mb-6">
           <ul className="flex gap-2 text-gray-500">
             <li>

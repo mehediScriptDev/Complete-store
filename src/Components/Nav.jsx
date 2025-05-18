@@ -7,16 +7,16 @@ const Nav = () => {
   const links = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to={'/'}>Home</NavLink>
       </li>
       <li>
-        <NavLink>All Visas</NavLink>
+        <NavLink to={'/allvisa'}>All Visas</NavLink>
       </li>
       <li>
         <NavLink to={'/faq'}>F.A.Q</NavLink>
       </li>
       <li>
-        <NavLink>About</NavLink>
+        <NavLink to={'/about'}>About</NavLink>
       </li>
       <li>
         <NavLink to={'/contact'}>Contact</NavLink>
@@ -63,10 +63,10 @@ const Nav = () => {
                 <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
                   {/* Sidebar content here */}
                   <li>
-                    <NavLink>Home</NavLink>
+                    <NavLink to={'/'}>Home</NavLink>
                   </li>
                   <li>
-                    <NavLink>All Visas</NavLink>
+                    <NavLink to={'/allvisa'}>All Visas</NavLink>
                   </li>
                   <li>
                     <NavLink to={'/contact'}>Contact</NavLink>
