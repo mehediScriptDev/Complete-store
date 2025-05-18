@@ -10,7 +10,7 @@ const Partner = () => {
     }}>
       <div className=" flex flex-col justify-center items-center">
         <h1 className="text-3xl lg:text-4xl font-bold">
-          <span className="border-b-8 border-bidcl">Our</span> Partners
+          Recommended <span className="border-b-8 border-bidcl">by</span> 
         </h1>
         <div className="mt-10 relative">
           <CircularGallery bend={5} textColor="#ffffff" borderRadius={0.05} />
