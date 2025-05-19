@@ -9,7 +9,8 @@ const Addvisa = () => {
     const age = form.age.value;
     const discription = form.discription.value;
     const time = form.time.value;
-    const data = {name,imageurl,age,discription};
+    const fee = form.fee.value;
+    const data = {name,imageurl,age,discription,fee,time};
     console.log(data)
 
     fetch('http://localhost:5000/visas',{
@@ -73,6 +74,16 @@ const Addvisa = () => {
               />
             </div>
           </div>
+          <div>
+              <label className="label font-semibold text-sm text-travelcl">Fee:</label>
+              <input
+              required
+                type="text"
+                className="input w-full"
+                placeholder="Enter fee"
+                name="fee"
+              />
+            </div>
           <div className="">
             <label className="label font-semibold text-sm text-travelcl">Add discription:</label>
            
