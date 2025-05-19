@@ -8,6 +8,7 @@ const Addvisa = () => {
     const imageurl = form.imageurl.value;
     const age = form.age.value;
     const discription = form.discription.value;
+    const time = form.time.value;
     const data = {name,imageurl,age,discription};
     console.log(data)
 
@@ -21,6 +22,7 @@ const Addvisa = () => {
             <div>
               <label className="label font-semibold text-sm">Visa title/Country name:</label>
               <input
+              required
                 type="text"
                 className="input w-full"
                 placeholder="Enter Country name/Visa title"
@@ -30,6 +32,7 @@ const Addvisa = () => {
             <div>
               <label className="label font-semibold text-sm">Country imageURL:</label>
               <input
+              required
               name="imageurl"
                 type="text"
                 className="input w-full"
@@ -42,6 +45,7 @@ const Addvisa = () => {
             <div>
               <label className="label font-semibold text-sm">Min age:</label>
               <input
+              required
                 type="text"
                 className="input w-full"
                 placeholder="Enter minimum age to apply"
@@ -51,6 +55,7 @@ const Addvisa = () => {
             <div>
               <label className="label text-sm font-semibold">How long it taken:</label>
               <input
+              required
                 type="text"
                 className="input w-full"
                 placeholder="Enter time itll take"
@@ -61,7 +66,7 @@ const Addvisa = () => {
           <div className="">
             <label className="label font-semibold text-sm">Add discription:</label>
            
-            <textarea className="input w-full" name="discription" placeholder="Enter a little discription" id=""></textarea>
+            <textarea className="input w-full h-36 lg:h-48" required name="discription" placeholder="Enter a little discription" id=""></textarea>
           </div>
 
           <button className="btn hover:bg-bidcl text-white bg-travelcl duration-300 mt-4">

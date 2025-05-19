@@ -3,11 +3,7 @@ import CircularGallery from "./CircularGallery";
 const Partner = () => {
   return (
     <section className="mt-10 lg:mt-20 py-10" 
-    style={{
-        backgroundImage:`url(${bg})`,
-        backgroundPosition:'center',
-        backgroundSize: 'cover'
-    }}>
+  >
       <div className=" flex flex-col justify-center items-center">
         <h1 className="text-3xl lg:text-4xl font-bold">
           Recommended <span className="border-b-8 border-bidcl">by</span> 
