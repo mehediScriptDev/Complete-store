@@ -12,6 +12,7 @@ import Home from './Components/Home.jsx';
 import Contact from './Components/Contact.jsx';
 import Faq from './Components/Faq.jsx';
 import Addvisa from './Components/Addvisa.jsx';
+import Allpost from './Components/Allpost.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path:'/addvisa',
         element: <Addvisa></Addvisa>
+      },
+      {
+        path: '/allvisa',
+        element: <Allpost></Allpost>,
+        loader:()=>fetch('http://localhost:5000/visas')
       }
     ]
   },
