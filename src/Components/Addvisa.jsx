@@ -8,7 +8,7 @@ const Addvisa = () => {
     const imageurl = form.imageurl.value;
     const age = form.age.value;
     const discription = form.discription.value;
-    const data = {name,imageurl,age,discription,data};
+    const data = {name,imageurl,age,discription};
     console.log(data)
 
   }
@@ -16,7 +16,7 @@ const Addvisa = () => {
     <div>
       <div className="card-body bg-base-200 w-8/12 mx-auto mt-10">
       <h1 className="text-center text-3xl font-bold text-travelcl py-3">Add <span className="text-bidcl">visa</span></h1>
-        <form className="fieldset">
+        <form onSubmit={handlesubmit} className="fieldset">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
               <label className="label font-semibold text-sm">Visa title/Country name:</label>
