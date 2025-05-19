@@ -2,7 +2,7 @@ import bg from '../images/bg.jpg'
 import CircularGallery from "./CircularGallery";
 const Partner = () => {
   return (
-    <section className="mt-10 lg:mt-20 py-10" 
+    <section className="mt-10 lg:mt-14 py-5" 
   >
       <div className=" flex flex-col justify-center items-center">
         <p className="text-bidcl text-xl font-bold  text-center">Why us?</p>

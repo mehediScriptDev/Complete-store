@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Feature = () => {
   return (
-    <section className="mt-15 py-3 lg:mt-20">
+    <section className="mt-16 py-3">
       <div className="w-10/12 mx-auto overflow-hidden">
       <p className="text-bidcl text-xl font-bold  text-center">Best Choice</p>
         <h1 className="text-3xl font-bold lg:text-4xl text-center ">

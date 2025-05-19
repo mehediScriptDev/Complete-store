@@ -5,6 +5,7 @@ import Feature from './Feature';
 import CircularGallery from './CircularGallery';
 import Partner from './Partner';
 import Latestvisa from './Latestvisa';
+import Proccess from './Proccess';
 
 const Home = () => {
     return (
@@ -13,7 +14,9 @@ const Home = () => {
             <Visa></Visa>
             <Latestvisa></Latestvisa>
             <Feature></Feature>
+            <Proccess></Proccess>
             <Partner></Partner>
+            
         </div>
     );
 };
