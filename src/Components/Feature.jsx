@@ -11,7 +11,7 @@ const Feature = () => {
   return (
     <section className="mt-15 py-3 lg:mt-20">
       <div className="w-10/12 mx-auto overflow-hidden">
-      <p className="py-2 text-xl font-bold  text-center">Best Choice</p>
+      <p className="text-bidcl text-xl font-bold  text-center">Best Choice</p>
         <h1 className="text-3xl font-bold lg:text-4xl text-center ">
           Honeymoon{" "}
           <span className="border-b-8 rounded-lg border-bidcl">visas</span>

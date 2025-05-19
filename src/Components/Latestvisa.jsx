@@ -13,6 +13,7 @@ const Latestvisa = () => {
   return (
     <section className="mt-14 bg-gray-50 py-5 lg:mt-20">
       <div className="w-11/12 mx-auto">
+      <p className="text-bidcl text-xl font-bold  text-center">Most requested visa</p>
         <h1 className="text-3xl font-bold lg:text-4xl text-center ">
           Top 5 most requested visas
         </h1>

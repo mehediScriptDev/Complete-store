@@ -5,6 +5,7 @@ const Partner = () => {
     <section className="mt-10 lg:mt-20 py-10" 
   >
       <div className=" flex flex-col justify-center items-center">
+        <p className="text-bidcl text-xl font-bold  text-center">Why us?</p>
         <h1 className="text-3xl lg:text-4xl font-bold">
           Recommended <span className="border-b-8 border-bidcl">by</span> 
         </h1>
