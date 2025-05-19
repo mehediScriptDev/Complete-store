@@ -22,7 +22,7 @@ const Addvisa = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if(data.insertId){
+        if(data.insertedId){
           Swal.fire({
           title: "Visa added!",
           icon: "success",
