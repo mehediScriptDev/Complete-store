@@ -12,6 +12,16 @@ const Addvisa = () => {
     const data = {name,imageurl,age,discription};
     console.log(data)
 
+    fetch('http://localhost:5000/visas',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(data)
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+
   }
   return (
     <div>
@@ -20,7 +30,7 @@ const Addvisa = () => {
         <form onSubmit={handlesubmit} className="fieldset">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label className="label font-semibold text-sm">Visa title/Country name:</label>
+              <label className="label font-semibold text-sm text-travelcl">Visa title/Country name:</label>
               <input
               required
                 type="text"
@@ -30,7 +40,7 @@ const Addvisa = () => {
               />
             </div>
             <div>
-              <label className="label font-semibold text-sm">Country imageURL:</label>
+              <label className="label font-semibold text-sm text-travelcl">Country imageURL:</label>
               <input
               required
               name="imageurl"
@@ -43,7 +53,7 @@ const Addvisa = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label className="label font-semibold text-sm">Min age:</label>
+              <label className="label font-semibold text-sm text-travelcl">Min age:</label>
               <input
               required
                 type="text"
@@ -53,7 +63,7 @@ const Addvisa = () => {
               />
             </div>
             <div>
-              <label className="label text-sm font-semibold">How long it taken:</label>
+              <label className="label text-sm font-semibold text-travelcl">How long it taken:</label>
               <input
               required
                 type="text"
@@ -64,7 +74,7 @@ const Addvisa = () => {
             </div>
           </div>
           <div className="">
-            <label className="label font-semibold text-sm">Add discription:</label>
+            <label className="label font-semibold text-sm text-travelcl">Add discription:</label>
            
             <textarea className="input w-full h-36 lg:h-48" required name="discription" placeholder="Enter a little discription" id=""></textarea>
           </div>
