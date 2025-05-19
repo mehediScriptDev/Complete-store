@@ -24,7 +24,7 @@ const Allpost = () => {
         {/* allposts */}
         <div>
           {
-            allvisas.map(singlevisa=> <Singlevisa  singlevisa='singlevisa'></Singlevisa>)
+            allvisas.map(visa => <Singlevisa key={allvisas._id} visa={visa}></Singlevisa>)
           }
         </div>
       </div>

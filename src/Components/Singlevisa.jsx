@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoClock } from "react-icons/go";
-const Singlevisa = ({singlevisa}) => {
-  const {name,imageurl,time,fee,_id} = singlevisa;
+const Singlevisa = ({visa}) => {
+  const {name,imageurl,time,fee,_id} = visa;
   console.log(name)
     return (
         <section>
