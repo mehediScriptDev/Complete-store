@@ -19,6 +19,7 @@ const Feature = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mt-10 ">
           <Link
+          data-aos="zoom-in" data-aos-delay="100"
             to={"/turkey/visa"}
             className="sm:col-span-2 lg:col-span-2 relative"
           >
@@ -31,7 +32,8 @@ const Feature = () => {
             </p>
           </Link>
          
-          <Link to={"/dubai/visa"} className="relative">
+          <Link
+          data-aos="zoom-in" data-aos-delay="100" to={"/dubai/visa"} className="relative">
             <img className="rounded-2xl " src={dubai} alt="place" />
             <p className="absolute top-4 right-4 bg-gray-700 text-white p-3 rounded-xl text-md font-semibold">
               DUBAI
@@ -40,7 +42,8 @@ const Feature = () => {
               Request Now <FaArrowRightLong />
             </p>
           </Link>
-          <Link to={"/turkey/visa"} className="relative">
+          <Link
+          data-aos="zoom-in" data-aos-delay="100" to={"/turkey/visa"} className="relative">
             <img
               className="rounded-2xl w-full object-cover"
               src={anatalya}
@@ -53,7 +56,8 @@ const Feature = () => {
               Request Now <FaArrowRightLong />
             </p>
           </Link>
-          <Link to={"/turkey/visa"} className="relative">
+          <Link
+          data-aos="zoom-in" data-aos-delay="100" to={"/turkey/visa"} className="relative">
             <img
               className="rounded-2xl w-full object-cover"
               src={anatalya2}
@@ -66,7 +70,8 @@ const Feature = () => {
               Request Now <FaArrowRightLong />
             </p>
           </Link>
-          <Link to={"/turkey/visa"} className="relative">
+          <Link
+          data-aos="zoom-in" data-aos-delay="200" to={"/turkey/visa"} className="relative">
             <img
               className="rounded-2xl w-full object-cover"
               src={anatalya3}

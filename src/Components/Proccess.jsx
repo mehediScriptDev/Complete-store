@@ -4,7 +4,7 @@ import { GiCommercialAirplane } from "react-icons/gi";
 
 const Proccess = () => {
   return (
-    <section className="mt-10 bg-gray-100 py-5">
+    <section data-aos="fade-up" className="mt-10 bg-gray-100 py-5">
       <div className="w-11/12 mx-auto">
         <h1 className="text-3xl font-bold lg:text-4xl text-center ">
           <span className="border-b-4 rounded-lg border-bidcl">How</span>
