@@ -1,10 +1,12 @@
 import { GoClock } from "react-icons/go";
+import { Link } from "react-router-dom";
 
-const VisaCard = ({visa}) => {
-    const {country,title,price,delivery,image} = visa;
-    return (
-        <section>
-             <div className="max-w-xs rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-1 mx-auto group">
+const VisaCard = ({ visa }) => {
+  const { country, title, price, delivery, image } = visa;
+  return (
+    <section>
+    <Link to={'/allvisa'}>
+      <div className="max-w-xs rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:-translate-y-1 mx-auto group">
         <img
           className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"
           src={image}
@@ -22,9 +24,9 @@ const VisaCard = ({visa}) => {
             {delivery}
           </div>
         </div>
-      </div>
-        </section>
-    );
+      </div></Link>
+    </section>
+  );
 };
 
 export default VisaCard;
