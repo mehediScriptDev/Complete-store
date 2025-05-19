@@ -1,6 +1,17 @@
 import React from "react";
 
 const Addvisa = () => {
+  const handlesubmit = e =>{
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const imageurl = form.imageurl.value;
+    const age = form.age.value;
+    const discription = form.discription.value;
+    const data = {name,imageurl,age,discription,data};
+    console.log(data)
+
+  }
   return (
     <div>
       <div className="card-body bg-base-200 w-8/12 mx-auto mt-10">
@@ -19,6 +30,7 @@ const Addvisa = () => {
             <div>
               <label className="label font-semibold text-sm">Country imageURL:</label>
               <input
+              name="imageurl"
                 type="text"
                 className="input w-full"
                 placeholder="Enter imageURL of that country"
