@@ -1,12 +1,13 @@
-
+import login from '../images/login.gif'
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="w-11/12 mx-auto">
        
-      <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
+     <div className='min-h-screen flex gap-3 lg:flex-row flex-col mt-10 items-center justify-center bg-gray-50'>
+         <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Sign In to TravelBid
+          Sign In to <span className="text-bidcl">TravelBid</span>
         </h2>
 
         <form className="space-y-5">
@@ -46,7 +47,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full bg-travelcl text-white py-2 rounded-lg hover:bg-blue-700 transition-all"
+            className="w-full bg-travelcl text-white py-2 rounded-lg hover:bg-bidcl duration-300 transition-all"
           >
             Login
           </button>
@@ -59,6 +60,10 @@ const Login = () => {
           </a>
         </p>
       </div>
+      <div>
+        <img src={login} alt="" />
+      </div>
+     </div>
     </div>
   );
 };
