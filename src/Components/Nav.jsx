@@ -7,17 +7,16 @@ const Nav = () => {
   const links = (
     <>
       <li>
-        <NavLink to={'/'}>Home</NavLink>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={'/allvisa'}>All Visas</NavLink>
+        <NavLink to={"/allvisa"}>All Visas</NavLink>
       </li>
       <li>
-        <NavLink to={'/faq'}>F.A.Q</NavLink>
+        <NavLink to={"/faq"}>F.A.Q</NavLink>
       </li>
-      
       <li>
-        <NavLink to={'/contact'}>Contact</NavLink>
+        <NavLink to={"/contact"}>Contact</NavLink>
       </li>
     </>
   );
@@ -32,9 +31,13 @@ const Nav = () => {
           <div className=" hidden lg:flex font-semibold">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
-          
+
           <div className="flex items-center gap-2">
-            <a title="Register/Login" className="hover:text-bidcl text-travelcl md:text-2xl" href="">
+            <a
+              title="Register/Login"
+              className="hover:text-bidcl text-travelcl md:text-2xl"
+              href=""
+            >
               <PiSignInBold />
             </a>
             <div className="drawer z-20 drawer-end">
@@ -45,11 +48,8 @@ const Nav = () => {
               />
               <div className="drawer-content">
                 {/* Page content here */}
-                <label
-                  htmlFor="my-drawer-4"
-                  className="drawer-button"
-                >
-                 <IoMdMenu className="md:text-3xl hover:text-bidcl" />
+                <label htmlFor="my-drawer-4" className="drawer-button">
+                  <IoMdMenu className="md:text-3xl hover:text-bidcl" />
                 </label>
               </div>
               <div className="drawer-side">
@@ -61,18 +61,17 @@ const Nav = () => {
                 <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
                   {/* Sidebar content here */}
                   <li>
-                    <NavLink to={'/'}>Home</NavLink>
+                    <NavLink to={"/"}>Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to={'/allvisa'}>All Visas</NavLink>
+                    <NavLink to={"/allvisa"}>All Visas</NavLink>
                   </li>
                   <li>
-                    <NavLink to={'/contact'}>Contact</NavLink>
+                    <NavLink to={"/contact"}>Contact</NavLink>
                   </li>
                   <li>
-                    <NavLink to={'/faq'}>FAQ</NavLink>
+                    <NavLink to={"/faq"}>FAQ</NavLink>
                   </li>
-                  
                 </ul>
               </div>
             </div>
