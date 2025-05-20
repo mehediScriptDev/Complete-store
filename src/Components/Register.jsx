@@ -36,7 +36,6 @@ const Register = () => {
               placeholder="Paste your photoURL here"
             />
           </div>
-
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-600">Password</label>
             <input
