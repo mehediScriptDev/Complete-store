@@ -14,6 +14,7 @@ import Faq from './Components/Faq.jsx';
 import Addvisa from './Components/Addvisa.jsx';
 import Allpost from './Components/Allpost.jsx';
 import Login from './Components/Login.jsx';
+import Register from './Components/Register.jsx';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
     ]
   },
