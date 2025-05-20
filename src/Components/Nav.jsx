@@ -1,5 +1,5 @@
 import { IoMdMenu } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { PiSignInBold } from "react-icons/pi";
 
@@ -33,13 +33,13 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <a
+            <Link
               title="Register/Login"
               className="hover:text-bidcl text-travelcl md:text-2xl"
-              href=""
+              to={'/login'}
             >
               <PiSignInBold />
-            </a>
+            </Link>
             <div className="drawer z-20 drawer-end">
               <input
                 id="my-drawer-4"
