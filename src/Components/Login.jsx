@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import login from '../images/login.gif'
 
 const Login = () => {
   return (
     <div className="w-11/12 mx-auto">
-       
-     <div className='min-h-screen flex gap-3 lg:flex-row flex-col mt-10 items-center justify-center bg-gray-50'>
+      
+     <div className=' flex gap-3 lg:flex-row flex-col items-center justify-center'>
          <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Sign In to <span className="text-bidcl">TravelBid</span>
@@ -55,9 +56,9 @@ const Login = () => {
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Don't have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline">
+          <Link to="/register" className="text-blue-600 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
       <div>
