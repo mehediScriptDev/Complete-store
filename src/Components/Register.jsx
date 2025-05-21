@@ -3,7 +3,7 @@ import { AuthContext } from '../../Auth/AuthProvider';
 
 const Register = () => {
 
-  const {creatUser} = useContext(AuthContext);
+  const {creatUser,setUser} = useContext(AuthContext);
   const submitHandler = e => {
     e.preventDefault();
     const form = e.target;
@@ -14,6 +14,7 @@ const Register = () => {
 
     creatUser(email,password)
     .then(result => {
+      setUser(result.user)
       console.log(result)
     })
     .catch(err=>console.log(err))
