@@ -3,7 +3,7 @@ import { AuthContext } from '../../Auth/AuthProvider';
 
 const Register = () => {
 
-  const {createUser} = useContext(AuthContext);
+  const {creatUser} = useContext(AuthContext);
   const submitHandler = e => {
     e.preventDefault();
     const form = e.target;
@@ -12,8 +12,11 @@ const Register = () => {
     const password = form.pass.value;
     const photo = form.pass.value;
 
-    createUser(email,password)
-    .then()
+    creatUser(email,password)
+    .then(result => {
+      console.log(result)
+    })
+    .catch(err=>console.log(err))
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
