@@ -2,6 +2,12 @@ import { Link } from 'react-router-dom';
 import login from '../images/login.gif'
 
 const Login = () => {
+  const submitHandler = e => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.email.value;
+    const password = form.pass.value;
+  }
   return (
     <div className="w-11/12 mx-auto">
       
@@ -11,12 +17,13 @@ const Login = () => {
           Sign In to <span className="text-bidcl">TravelBid</span>
         </h2>
 
-        <form className="space-y-5">
+        <form onSubmit={submitHandler} className="space-y-5">
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-600">
               Email
             </label>
             <input
+            name="email"
               type="email"
               required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -29,6 +36,7 @@ const Login = () => {
               Password
             </label>
             <input
+            name="pass"
               type="password"
               required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
