@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Auth/AuthProvider';
 
 const Register = () => {
+
+  const {createUser} = useContext(AuthContext);
   const submitHandler = e => {
     e.preventDefault();
     const form = e.target;
@@ -8,6 +11,9 @@ const Register = () => {
     const email = form.email.value;
     const password = form.pass.value;
     const photo = form.pass.value;
+
+    createUser(email,password)
+    .then()
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
