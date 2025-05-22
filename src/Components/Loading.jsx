@@ -1,17 +1,10 @@
-import { Audio } from "react-loader-spinner";
+import { div } from "framer-motion/client";
+
 
 const Loading = () => {
   return (
-    <div>
-      <Audio
-        height="80"
-        width="80"
-        radius="9"
-        color="green"
-        ariaLabel="loading"
-        wrapperStyle
-        wrapperClass
-      />
+    <div className="min-h-screen flex justify-center items-center">
+        <span className="loading loading-spinner loading-xl"></span>
     </div>
   );
 };
