@@ -8,9 +8,10 @@ import { img, p } from "framer-motion/client";
 
 const Nav = () => {
   const { setUser,user,logginOUt } = useContext(AuthContext);
+  console.log(user)
   const logingOut = () =>{
     logginOUt().then(()=>{
-      setUser(null)
+     
     }).catch(err=>{console.log(err)})
   }
   const links = (
@@ -42,10 +43,10 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            {user ? (
+            {user? (
               <div className="dropdown dropdown-bottom dropdown-center">
                 <div tabIndex={0} role="button" className=" m-1">
-                  <img className="rounded-full w-16" src={user.photoURL} alt="profilePhoto" />
+                  <img className="rounded-full w-16" src={user.photoURL || "https://i.ibb.co/2tK5t9r/default-avatar.png"} alt="profilePhoto" />
                 </div>
                 <ul
                   tabIndex={0}
