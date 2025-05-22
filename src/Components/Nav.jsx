@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { PiSignInBold } from "react-icons/pi";
 import { useContext } from "react";
-import { AuthContext } from "../../Auth/AuthProvider";
+import  AuthContext  from "../../Auth/AuthProvider";
 
 const Nav = () => {
   const {user} = useContext(AuthContext);
