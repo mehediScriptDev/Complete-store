@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const navigate =useNavigate();
 const Register = () => {
-  const { creatUser, setUser, googlelogin } = useContext(AuthContext);
+  const { createUser, setUser, googlelogin } = useContext(AuthContext);
   const submitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,7 +14,7 @@ const Register = () => {
     const password = form.pass.value;
     const photo = form.pass.value;
 
-    creatUser(email, password)
+    createUser(email, password)
       .then((result) => {
         setUser(result.user);
         console.log(result);

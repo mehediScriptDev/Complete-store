@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { PiSignInBold } from "react-icons/pi";
 import { useContext } from "react";
-import  AuthContext  from "../../Auth/AuthProvider";
+import  {AuthContext}  from "../../Auth/AuthProvider";
 
 const Nav = () => {
   const {user} = useContext(AuthContext);
@@ -36,7 +36,7 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center gap-2">
-           {user? <p>Welcome, {user.email}</p> : <Link
+           {user? <p>Welcome, {user?.email}</p> : <Link
               title="Register/Login"
               className="hover:text-bidcl text-travelcl md:text-2xl"
               to={'/login'}
