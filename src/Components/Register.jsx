@@ -3,9 +3,10 @@ import { AuthContext } from "../../Auth/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 
-const navigate =useNavigate();
+
 const Register = () => {
   const { createUser, setUser, googlelogin } = useContext(AuthContext);
+  const navigate =useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
