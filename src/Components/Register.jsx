@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
+
+const navigate =useNavigate();
 const Register = () => {
   const { creatUser, setUser, googlelogin } = useContext(AuthContext);
   const submitHandler = (e) => {
@@ -22,6 +25,7 @@ const Register = () => {
    googlelogin()
    .then(result=>{
     setUser(result.user)
+    navigate('/')
    })
   .catch(err=>console.log(err))  }
   return (
