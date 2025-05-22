@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { createContext, useState,useEffect } from "react";
 import { auth } from "../Firebase/firebase.init";
+import Loading from "../src/Components/Loading";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -24,6 +25,9 @@ const provider = new GoogleAuthProvider();
 
     return () => unsubscribe();
   }, []);
+  if(loading){
+    return <Loading></Loading>
+  }
 
   const logginOUt = () =>{
     return signOut(auth);
