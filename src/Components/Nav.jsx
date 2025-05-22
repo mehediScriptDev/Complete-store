@@ -2,8 +2,11 @@ import { IoMdMenu } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { PiSignInBold } from "react-icons/pi";
+import { useContext } from "react";
+import { AuthContext } from "../../Auth/AuthProvider";
 
 const Nav = () => {
+  const {user} = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -33,13 +36,13 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <Link
+           {user? <p>Welcome, {user.email}</p> : <Link
               title="Register/Login"
               className="hover:text-bidcl text-travelcl md:text-2xl"
               to={'/login'}
             >
               <PiSignInBold />
-            </Link>
+            </Link>}
             <div className="drawer z-20 drawer-end">
               <input
                 id="my-drawer-4"
