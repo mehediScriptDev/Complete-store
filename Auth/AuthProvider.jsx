@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { createContext, useState,useEffect } from "react";
 import { auth } from "../Firebase/firebase.init";
 
@@ -22,11 +22,15 @@ const provider = new GoogleAuthProvider();
       setLoading(false);
     });
 
-    // Cleanup subscription on unmount
     return () => unsubscribe();
   }, []);
+
+  const logginOUt = () =>{
+    return signOut(auth);
+  }
   const info = {
     user,
+    logginOUt,
     loading,
     setUser,
     createUser,

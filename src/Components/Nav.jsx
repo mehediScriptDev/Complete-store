@@ -7,8 +7,12 @@ import { AuthContext } from "../../Auth/AuthProvider";
 import { img, p } from "framer-motion/client";
 
 const Nav = () => {
-  const { user } = useContext(AuthContext);
-  console.log(user)
+  const { setUser,user,logginOUt } = useContext(AuthContext);
+  const logingOut = () =>{
+    logginOUt().then(()=>{
+      setUser(null)
+    }).catch(err=>{console.log(err)})
+  }
   const links = (
     <>
       <li>
@@ -48,7 +52,7 @@ const Nav = () => {
                   className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
                 >
                   <li>
-                    <a>Log Out</a>
+                    <a onClick={logingOut}>Log Out</a>
                   </li>
                 </ul>
               </div>
