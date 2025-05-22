@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 
 const Register = () => {
-  const { creatUser, setUser } = useContext(AuthContext);
+  const { creatUser, setUser, googlelogin } = useContext(AuthContext);
   const submitHandler = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -18,6 +18,12 @@ const Register = () => {
       })
       .catch((err) => console.log(err));
   };
+  const googleLogin =()=>{
+   googlelogin()
+   .then(result=>{
+    setUser(result.user)
+   })
+  .catch(err=>console.log(err))  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
@@ -83,7 +89,9 @@ const Register = () => {
           >
             Register
           </button>
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          
+        </form>
+        <button onClick={googleLogin} className="btn w-full mt-3 bg-white text-black border-[#e5e5e5]">
             <svg
               aria-label="Google logo"
               width="16"
@@ -113,7 +121,6 @@ const Register = () => {
             </svg>
             Login with Google
           </button>
-        </form>
 
         <p className="mt-6 text-center text-sm text-gray-500">
           Already have an account?{" "}
