@@ -6,9 +6,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import { p } from "framer-motion/client";
 
-
 const Nav = () => {
-const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -38,13 +37,29 @@ const {user} = useContext(AuthContext);
           </div>
 
           <div className="flex items-center gap-2">
-            {user? <p>{user?.displayName}</p> :<Link
-              title="Register/Login"
-              className="hover:text-bidcl text-travelcl md:text-2xl"
-              to={'/login'}
-            >
-              <PiSignInBold />
-            </Link>}
+            {user ? (
+              <div className="dropdown dropdown-bottom dropdown-center">
+                <div tabIndex={0} role="button" className=" m-1">
+                  {user.displayName}
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                >
+                  <li>
+                    <a>Item 1</a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link
+                title="Register/Login"
+                className="hover:text-bidcl text-travelcl md:text-2xl"
+                to={"/login"}
+              >
+                <PiSignInBold />
+              </Link>
+            )}
             <div className="drawer z-20 drawer-end">
               <input
                 id="my-drawer-4"
