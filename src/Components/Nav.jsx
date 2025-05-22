@@ -4,10 +4,11 @@ import logo from "../images/logo.png";
 import { PiSignInBold } from "react-icons/pi";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
-import { p } from "framer-motion/client";
+import { img, p } from "framer-motion/client";
 
 const Nav = () => {
   const { user } = useContext(AuthContext);
+  console.log(user)
   const links = (
     <>
       <li>
@@ -40,14 +41,14 @@ const Nav = () => {
             {user ? (
               <div className="dropdown dropdown-bottom dropdown-center">
                 <div tabIndex={0} role="button" className=" m-1">
-                  {user.displayName}
+                  <img className="rounded-full w-16" src={user.photoURL} alt="profilePhoto" />
                 </div>
                 <ul
                   tabIndex={0}
                   className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
                 >
                   <li>
-                    <a>Item 1</a>
+                    <a>Log Out</a>
                   </li>
                 </ul>
               </div>
