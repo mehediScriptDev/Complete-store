@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, sendPasswordResetEmail } from "firebase/auth";
 import React, { createContext, useState,useEffect } from "react";
 import { auth } from "../Firebase/firebase.init";
 import Loading from "../src/Components/Loading";
@@ -32,8 +32,13 @@ const provider = new GoogleAuthProvider();
   const logginOUt = () =>{
     return signOut(auth);
   }
+
+  // forget pass
+  const forgotPass = (email) =>{
+    return sendPasswordResetEmail(auth,email);
+  }
   const info = {
-    user,
+    user,forgotPass,
     logginOUt,
     loading,
     setUser,
