@@ -8,7 +8,6 @@ import { img, p } from "framer-motion/client";
 
 const Nav = () => {
   const { setUser,user,logginOUt } = useContext(AuthContext);
-  console.log(user)
   const logingOut = () =>{
     logginOUt().then(()=>{
      

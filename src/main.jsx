@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/allvisa",
-        element: <Allpost></Allpost>,
+        element: <Private><Allpost></Allpost></Private>,
         loader: () => fetch("http://localhost:5000/visas"),
       },
       {
