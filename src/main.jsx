@@ -13,6 +13,7 @@ import Allpost from "./Components/Allpost.jsx";
 import Login from "./Components/Login.jsx";
 import Register from "./Components/Register.jsx";
 import AuthProvider, { AuthContext } from "../Auth/AuthProvider.jsx";
+import Private from "../PrivateRoute/Private.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addvisa",
-        element: <Addvisa></Addvisa>,
+        element: <Private><Addvisa></Addvisa></Private>,
       },
       {
         path: "/allvisa",
