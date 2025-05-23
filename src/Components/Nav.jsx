@@ -22,6 +22,9 @@ const Nav = () => {
       <li>
         <NavLink to={"/allvisa"}>All Visas</NavLink>
       </li>
+      {user&& <li>
+        <NavLink to={"/addvisa"}>Add Visa</NavLink>
+      </li>}
       <li>
         <NavLink to={"/faq"}>F.A.Q</NavLink>
       </li>
