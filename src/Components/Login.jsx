@@ -120,8 +120,8 @@ const Login = () => {
                 </form>
                 <h3 className="font-bold text-lg">Write email to get reset email.</h3>
                 <form onSubmit={passwordForgot} className="flex gap-2">
-                  <input className="py-2 px-4 rounded-md border-2 border-travelcl w-full" type="email" placeholder="Type email here" name="email" id="" />
-                <input className="btn rounded-md text-white bg-travelcl" type="submit" value="Enter" />
+                  <input defaultValue={'Yourmail@gmail.com'} className="py-2 px-4 rounded-md border-2 border-travelcl w-full" type="email" placeholder="Type email here" name="email" id="" />
+                <input className="btn rounded-md text-white bg-travelcl" type="submit" value="Sent" />
                 </form>
               </div>
             </dialog>
