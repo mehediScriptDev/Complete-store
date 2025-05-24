@@ -10,7 +10,7 @@ This is the frontend of **TravelBid**, a visa management platform where users ca
 
 ## 🔗 Server Repository
 
-👉 [TravelBid Server Repo (Node/Express API)](https://github.com/mehediScriptDev/store-server)
+👉 [TravelBid Server Repo (Node/Express API/Mongodb/Firebase)](https://github.com/mehediScriptDev/store-server)
 
 ## 🛠️ Technologies Used
 
